@@ -11,8 +11,10 @@ public class StatsChecker {
 	}
 
 	public void checkAndAlert(Float[] numbers) {
-		EmailAlert e = new EmailAlert();
-		LEDAlert l = new LEDAlert();
+		//EmailAlert e = new EmailAlert();
+		EmailAlert e = (EmailAlert) alerters[0];
+		LEDAlert l = (LEDAlert) alerters[1];
+		//LEDAlert l = new LEDAlert();
 		Float max = 0.0f;
 		System.out.println("maxThreshold : "  + maxThreshold);
 		for(int i=0;i<numbers.length;i++)
